@@ -1,0 +1,779 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑", sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    min-width: 975px;
+}
+/* 导航区 */
+
+.navbar {
+    background-color: #131313;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar__container {
+    height: 80px;
+    width: 100%;
+    max-width: 1500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.navbar__logo {
+    text-decoration: none;
+    font-size: 3rem;
+    height: 80px;
+    background: #F7971E;
+    background: -webkit-linear-gradient(to right, #FFD200, #F7971E);
+    background: linear-gradient(to right, #FFD200, #F7971E);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.fa-gun {
+    margin-right: 0.8rem;
+}
+
+.navbar__menu {
+    background-color: #131313;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    height: 80px;
+}
+
+.menu__item {
+    height: 80px;
+}
+
+.menu__header {
+    font-size: 1.5rem;
+    height: 80px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.menu__header:hover {
+    color: #f77062;
+}
+
+.menu__button {
+    padding: 0 1rem;
+}
+
+.navbar__button {
+    color: white;
+    font-size: 1.3rem;
+    padding: 10px 20px;
+    background: #f77062;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navbar__button:hover {
+    background-color: #4837ff;
+}
+
+.dropdown__item {
+    color: white;
+    font-size: 1.2rem;
+    padding: 1rem 1rem;
+    cursor: pointer;
+    text-align: center;
+    border: 1px grey solid;
+    transition: all 0.3s ease;
+}
+
+.dropdown__item:hover {
+    color: #f77062;
+}
+
+.dropdown {
+    display: none;
+    list-style: none;
+    background-color: #3a3737;
+    grid-template-columns: auto;
+    align-items: center;
+}
+
+.dropdown.dropdown__active {
+    display: grid;
+}
+
+@media screen and (max-width: 1500px) {
+    .navbar__container {
+        padding: 0;
+    }
+
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: auto;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        z-index: 2;
+        transition: all 0.5s ease;
+    }
+
+    .navbar__menu.navbar__menu__active {
+        top: 100%;
+    }
+
+    .menu__item {
+        height: auto;
+    }
+
+    .dropdown__item {
+        background-color: #131313;
+        border: none;
+    }
+
+    .navbar__logo {
+        margin-left: 30px;
+    }
+
+    .white__bar {
+        display: block;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        width: 25px;
+        height: 3px;
+        transition: all 0.3s ease;
+        background-color: #fff;
+    }
+
+    .navbar__toggle {
+        cursor: pointer;
+        margin-right: 30px;
+        z-index: 3;
+    }
+
+    .navbar__toggle.navbar__toggle__active .white__bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar__toggle.navbar__toggle__active .white__bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .navbar__toggle.navbar__toggle__active .white__bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .menu__button {
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .navbar__button {
+        font-size: 2rem;
+    }
+
+    .menu__header {
+        font-size: 1.8rem;
+    }
+}
+
+/* 主体区 */
+
+.main {
+    background: #C33764;
+    background: -webkit-linear-gradient(to right, #1D2671, #C33764);
+    background: linear-gradient(to right, #1D2671, #C33764);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+}
+
+.main.mobileVersion {
+    height: 2000px;
+}
+
+.main__container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.picture__container {
+    width:800px;
+    height: 800px;
+    position: absolute;
+    top: 150px;
+}
+
+.picture__container.have__left {
+    left: 50px;
+}
+
+.picture__container.mobileVersion {
+    top: 200px;
+}
+
+.canvas {
+    width: 800px;
+    height: 800px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+    border: 3px solid purple;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.main__content {
+    width: 600px;
+    height: 800px;
+    position: absolute;
+    top: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.main__content.have__right {
+    right: 50px;
+}
+
+.main__content.mobileVersion {
+    top: 1100px;
+    width: 800px;
+}
+
+.filter__layer {
+    background: #C9D6FF;
+    background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);
+    background: linear-gradient(to right, #E2E2E2, #C9D6FF);
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    filter: blur(2px);
+}
+
+.msg1 {
+    display: block;
+    font-size: 2.3rem;
+    font-weight: bold;
+    position: absolute;
+    top: -10000px;
+}
+
+.msg1.appear {
+    top: 5%;
+}
+
+.four__modes__button {
+    width: 550px;
+    height: 100px;
+    position: absolute;  
+    top: -10000px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.four__modes__button.appear {
+    top: 10%;
+}
+
+.mode__button {
+    margin: 20px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mode__button:hover {
+    font-size: 1.5rem;    
+}
+
+.mode__button.mode__button__active {
+    border: 5px solid #131313;
+}
+
+#smoke__mode {
+    background: #2193b0;
+    background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);
+    background: linear-gradient(to right, #6dd5ed, #2193b0);
+}
+
+#flash__mode {
+    background: #fffc00;
+    background: -webkit-linear-gradient(to right, #ffffff, #fffc00);
+    background: linear-gradient(to right, #ffffff, #fffc00);  
+}
+
+#grenade__mode {
+    background: #134E5E;
+    background: -webkit-linear-gradient(to right, #71B280, #134E5E);
+    background: linear-gradient(to right, #71B280, #134E5E);  
+}
+
+#fire__mode {
+    background: #f12711;
+    background: -webkit-linear-gradient(to right, #f5af19, #f12711);
+    background: linear-gradient(to right, #f5af19, #f12711);  
+}
+
+.msg2 {
+    font-size: 1.5rem;
+    position: absolute;
+    top: -10000px;
+}
+
+.msg2.appear {
+    top: 5%;
+}
+
+.section__choose {
+    position: absolute;
+    top: -10000px;
+    width: 100%;
+    height: 150px;
+}
+
+.section__choose.appear {
+    top: 10%;
+}
+
+.section__inf {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -10000px;
+}
+
+.section__inf.appear {
+    top: 0;
+}
+
+.section__button {
+    margin: 10px;
+    border-radius: 30px;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background: #654ea3;
+    background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);
+    background: linear-gradient(to right, #eaafc8, #654ea3);
+    color: white;
+}
+
+.section__button:hover {
+    font-weight: bold;
+}
+
+.section__button.section__button__active {
+    font-weight: bold;
+    color: #630ad1;
+}
+
+.item__info {
+    height: 550px;
+    width: 100%;
+    position: absolute;
+    top: -10000px;
+    display: flex;
+    justify-content: center;
+}
+
+.item__info.appear {
+    top: 30%;
+}
+
+.msg3 {
+    font-size: 2.1rem;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+}
+
+.msg3__content {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 15%;
+    width: 80%;
+    height: 300px;
+    border: 3px #131313 dashed;
+    padding: 10px;
+}
+
+.learn {
+    position: absolute;
+    bottom: 10%;
+    width: 150px;
+    height: 90px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 2.3rem;
+    font-weight: bold;
+    text-decoration: none;
+    background: #FC5C7D;
+    background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);
+    background: linear-gradient(to right, #6A82FB, #FC5C7D);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: all 0.2s;
+}
+
+.learn.appear {
+    display: flex;
+}
+
+.learn:hover {
+    font-size: 2.6rem;
+}
+
+.msg4 {
+    position: absolute;
+    top: -10000px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+}
+
+.msg4.appear {
+    top: 5%;
+}
+
+.combine__choose {
+    position: absolute;
+    top: -10000px;
+    width: 100%;
+    height: 200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.combine__choose.appear {
+    top: 14%;
+}
+
+.side {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.sideT {
+    left: 0;
+}
+
+.sideCT {
+    right: 0;
+}
+
+.side__button {
+    height: 100px;
+    width: 170px;
+    font-size: 2.7rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    top: 0;
+}
+
+.side__button:hover {
+    font-size: 3rem;
+}
+
+.side__button.side__button__active {
+    border: 5px solid #131313;
+    transition: 0.3s;
+}
+
+.button__T {
+    background: #f12711;
+    background: -webkit-linear-gradient(to right, #f5af19, #f12711);
+    background: linear-gradient(to right, #f5af19, #f12711);   
+}
+
+.button__CT {
+    background: #2193b0;
+    background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);
+    background: linear-gradient(to right, #6dd5ed, #2193b0);
+}
+
+.side__list {
+    list-style: none;
+    position: absolute;
+    top: -10000px;
+    width: 140px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 1.5rem;
+}
+
+.side__list.appear {
+    top: 110px;
+}
+
+.side__list__dropdown {
+    background: #485563;
+    background: -webkit-linear-gradient(to right, #29323c, #485563);
+    background: linear-gradient(to right, #29323c, #485563);
+    border: none;
+    border-radius: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.dropdown__links {
+    text-decoration: none;
+    color: white;
+}
+
+.sideT .dropdown__links:hover {
+    color: orange;
+}
+
+.sideCT .dropdown__links:hover {
+    color: lightblue;
+}
+
+.start {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 1.28rem;
+    height: 1.28rem;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.start.appear {
+    display: flex;
+}
+
+.start.start__active {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.end {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    z-index: 3;
+}
+
+.end.appear {
+    display: flex;
+}
+
+.smoke__st {
+    background: #2193b0;
+    background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);
+    background: linear-gradient(to right, #6dd5ed, #2193b0);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.grenade__st {
+    background: #134E5E;
+    background: -webkit-linear-gradient(to right, #71B280, #134E5E);
+    background: linear-gradient(to right, #71B280, #134E5E);  
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.flash__st {
+    background: #fffc00;
+    background: -webkit-linear-gradient(to right, #ffffff, #fffc00);
+    background: linear-gradient(to right, #ffffff, #fffc00);  
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.fire__st {
+    background: #f12711;
+    background: -webkit-linear-gradient(to right, #f5af19, #f12711);
+    background: linear-gradient(to right, #f5af19, #f12711);    
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.smoke__nd {
+    background: #bdc3c7;
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);
+    background: linear-gradient(to right, #2c3e50, #bdc3c7);    
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.grenade__nd {
+    background: #f85032;
+    background: -webkit-linear-gradient(to right, #e73827, #f85032);
+    background: linear-gradient(to right, #e73827, #f85032);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.flash__nd {
+    background-color: white;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.fire__nd {
+    background: #ED213A;
+    background: -webkit-linear-gradient(to right, #93291E, #ED213A);
+    background: linear-gradient(to right, #93291E, #ED213A);    
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+/* inf烟 */
+#inf__smoke-1-st { position: absolute; left: 23.5%; top: 67%; } #inf__smoke-1-nd { position: absolute; left: 60%; top: 21.5%; }
+#inf__smoke-2-st { position: absolute; left: 42.5%; top: 44%; } #inf__smoke-2-nd { position: absolute; left: 49%; top: 14%; }
+#inf__smoke-3-st { position: absolute; left: 48%; top: 42%; } #inf__smoke-3-nd { position: absolute; left: 60%; top: 21.5%; }
+#inf__smoke-4-st{ position: absolute; left: 54%; top: 70%; } #inf__smoke-4-nd { position: absolute; left: 68%; top: 53.5%; }
+#inf__smoke-5-st { position: absolute; left: 58%; top: 76.8%; } #inf__smoke-5-nd { position: absolute; left: 68%; top: 53.5%; }
+#inf__smoke-6-st{ position: absolute; left: 46%; top: 63%; } #inf__smoke-6-nd { position: absolute; left: 67%; top: 68%; }
+#inf__smoke-7-st{ position: absolute; left: 70%; top: 57%; } #inf__smoke-7-nd { position: absolute; left: 83%; top: 53%; }
+#inf__smoke-8-st{ position: absolute; left: 64.5%; top: 70%; } #inf__smoke-8-nd { position: absolute; left: 68%; top: 58%; }
+#inf__smoke-9-st{ position: absolute; left: 90%; top: 35%; } #inf__smoke-9-nd { position: absolute; left: 63%; top: 64.8%; }
+#inf__smoke-10-st { position: absolute; left: 49%; top: 6%; } #inf__smoke-10-nd { position: absolute; left: 55%; top: 30%; }
+#inf__smoke-11-st { position: absolute; left: 84%; top: 37%; } #inf__smoke-11-nd { position: absolute; left: 65%; top: 73%; }
+#inf__smoke-12-st { position: absolute; left: 75%; top: 48%; } #inf__smoke-12-nd { position: absolute; left: 85%; top: 70.5%; }
+#inf__smoke-13-st { position: absolute; left: 52%; top: 38.5%; } #inf__smoke-13-nd { position: absolute; left: 55%; top: 32%; }
+#inf__smoke-14-st { position: absolute; left: 35.3%; top: 80.5%; } #inf__smoke-14-nd { position: absolute; left: 67%; top: 67%; }
+#inf__smoke-15-st { position: absolute; left: 52%; top: 62%; } #inf__smoke-15-nd { position: absolute; left: 82%; top: 75%; }
+#inf__smoke-16-st { position: absolute; left: 65%; top: 17%; } #inf__smoke-16-nd { position: absolute; left: 42%; top: 57%; }
+#inf__smoke-17-st { position: absolute; left: 68%; top: 17%; } #inf__smoke-17-nd { position: absolute; left: 48%; top: 36%; }
+#inf__smoke-18-st { position: absolute; left: 50.5%; top: 14%; } #inf__smoke-18-nd { position: absolute; left: 42%; top: 57%; }
+#inf__smoke-19-st { position: absolute; left: 49.5%; top: 36.5%; } #inf__smoke-19-nd { position: absolute; left: 53%; top: 23%; }
+#inf__smoke-20-st { position: absolute; left: 73%; top: 81%; } #inf__smoke-20-nd { position: absolute; left: 79%; top:77%; }
+#inf__smoke-21-st { position: absolute; left: 44%; top: 79%; } #inf__smoke-21-nd { position: absolute; left: 68%; top:52%; }
+#inf__smoke-22-st { position: absolute; left: 59%; top: 67%; } #inf__smoke-22-nd { position: absolute; left: 85%; top:56%; }
+#inf__smoke-23-st { position: absolute; left: 76%; top: 70%; } #inf__smoke-23-nd { position: absolute; left: 79%; top:70%; }
+#inf__smoke-24-st { position: absolute; left: 63%; top: 67.5%; } #inf__smoke-24-nd { position: absolute; left: 68%; top:58%; }
+#inf__smoke-25-st { position: absolute; left: 50%; top: 66.8%; } #inf__smoke-25-nd { position: absolute; left: 83%; top:53%; }
+#inf__smoke-26-st { position: absolute; left: 31%; top: 80%; } #inf__smoke-26-nd { position: absolute; left: 75.5%; top:48.5%; }
+#inf__smoke-27-st { position: absolute; left: 59%; top:67%; } #inf__smoke-27-nd { position: absolute; left: 75.5%; top:48.5%; }
+#inf__smoke-28-st { position: absolute; left: 24%; top:60%; } #inf__smoke-28-nd { position: absolute; left: 68%; top:67%; }
+/* inf火 */
+#inf__fire-1-st { position: absolute; top: 50%; left: 39%; } #inf__fire-1-nd { position: absolute; top: 30%; left: 55%; }
+#inf__fire-2-st { position: absolute; top: 61.5%; left: 55%; } #inf__fire-2-nd { position: absolute; top: 74%; left: 73%; }
+#inf__fire-3-st { position: absolute; top: 72.5%; left: 70%; } #inf__fire-3-nd { position: absolute; top: 77%; left:90%; }
+#inf__fire-4-st { position: absolute; top: 78%; left: 33%; } #inf__fire-4-nd { position: absolute; top: 74.5%; left: 64%; }
+#inf__fire-5-st { position: absolute; top: 12.5%; left: 51%; } #inf__fire-5-nd { position: absolute; top: 40.5%; left: 47%; }
+#inf__fire-6-st { position: absolute; top: 57%; left: 42.7%; } #inf__fire-6-nd { position: absolute; top: 34%; left: 48%; }
+#inf__fire-7-st { position: absolute; top: 36.5%; left: 48%; } #inf__fire-7-nd { position: absolute; top: 26%; left: 51%; }
+#inf__fire-8-st { position: absolute; top: 24%; left: 57%; } #inf__fire-8-nd { position: absolute; top: 38.3%; left: 45.3%; }
+#inf__fire-9-st { position: absolute; top: 32%; left: 54.5%; } #inf__fire-9-nd { position: absolute; top: 43.5%; left: 44%; }
+#inf__fire-10-st { position: absolute; top: 70%; left: 65%; } #inf__fire-10-nd { position: absolute; top: 77%; left: 59%; }
+#inf__fire-11-st { position: absolute; top: 52%; left: 80%; } #inf__fire-11-nd { position: absolute; top: 71.8%; left: 81%; }
+#inf__fire-12-st { position: absolute; top: 23.3%; left: 66%; } #inf__fire-12-nd { position: absolute; top: 23%; left: 40%; }
+#inf__fire-13-st { position: absolute; top: 63.5%; left: 60%; } #inf__fire-13-nd { position: absolute; top: 75%; left: 68%; }
+/* inf雷 */
+#inf__grenade-1-st { position: absolute; top: 74%; left: 65%; } #inf__grenade-1-nd { position: absolute; top: 76.5%; left: 53%; }
+#inf__grenade-2-st { position: absolute; top: 37%; left: 51%; } #inf__grenade-2-nd { position: absolute; top: 50%; left: 45%; }
+#inf__grenade-3-st { position: absolute; top: 34%; left: 51%; } #inf__grenade-3-nd { position: absolute; top: 58.5%; left: 40%; }
+#inf__grenade-4-st { position: absolute; top: 67.5%; left: 67%; } #inf__grenade-4-nd { position: absolute; top: 63%; left: 45.5%; }
+#inf__grenade-5-st { position: absolute; top: 69%; left: 64.5%; } #inf__grenade-5-nd { position: absolute; top: 83.5%; left: 64.5%; }
+#inf__grenade-6-st { position: absolute; top: 19%; left: 65%; } #inf__grenade-6-nd { position: absolute; top: 17%; left: 51%; }
+#inf__grenade-7-st { position: absolute; top: 39%; left: 48%; } #inf__grenade-7-nd { position: absolute; top: 13%; left: 50%; }
+#inf__grenade-8-st { position: absolute; top: 78%; left: 76%; } #inf__grenade-8-nd { position: absolute; top: 77%; left: 58%; }
+#inf__grenade-9-st { position: absolute; top: 27%; left: 51.5%; } #inf__grenade-9-nd { position: absolute; top: 34%; left: 50%; }
+#inf__grenade-10-st { position: absolute; top: 80%; left: 92%; } #inf__grenade-10-nd { position: absolute; top: 72%; left: 68%; }
+#inf__grenade-11-st { position: absolute; top: 45%; left: 44%; } #inf__grenade-11-nd { position: absolute; top: 32%; left: 55%; }
+/* inf闪 */
+#inf__flash-1-st { position: absolute; top: 74%; left: 66.5%; } #inf__flash-1-nd { position: absolute; top: 77.5%; left: 78%; }
+#inf__flash-2-st { position: absolute; top: 58%; left: 42%; } #inf__flash-2-nd { position: absolute; top: 38%; left: 46%; }
+#inf__flash-3-st { position: absolute; top: 54%; left: 44%; } #inf__flash-3-nd { position: absolute; top: 38%; left: 46%; }
+#inf__flash-4-st { position: absolute; top: 42.5%; left: 47%; } #inf__flash-4-nd { position: absolute; top: 39%; left: 48%; }
+#inf__flash-5-st { position: absolute; top: 59%; left: 35%; } #inf__flash-5-nd { position: absolute; top: 66%; left: 63.5%; }
+#inf__flash-6-st { position: absolute; top: 80%; left: 89%; } #inf__flash-6-nd { position: absolute; top: 72%; left: 69%; }
+#inf__flash-7-st { position: absolute; top: 13.5%; left: 51%; } #inf__flash-7-nd { position: absolute; top: 35%; left: 51%; }
+#inf__flash-8-st { position: absolute; top: 61%; left: 37%; } #inf__flash-8-nd { position: absolute; top: 53%; left: 38%; }
+#inf__flash-9-st { position: absolute; top: 84%; left: 64.5%; } #inf__flash-9-nd { position: absolute; top: 82%; left: 67.5%; }
+#inf__flash-10-st { position: absolute; top: 78.3%; left: 76%; } #inf__flash-10-nd { position: absolute; top: 80%; left: 74%; }
+#inf__flash-11-st { position: absolute; top: 72%; left: 65.4%; } #inf__flash-11-nd { position: absolute; top: 75%; left: 56%; }
+#inf__flash-12-st { position: absolute; top: 77%; left: 65.5%; } #inf__flash-12-nd { position: absolute; top: 69%; left: 66%; }
+#inf__flash-13-st { position: absolute; top: 83%; left: 72%; } #inf__flash-13-nd { position: absolute; top: 82%; left: 85%; }
+#inf__flash-14-st { position: absolute; top: 28%; left: 50.5%; } #inf__flash-14-nd { position: absolute; top: 27%; left: 53.3%; }
+#inf__flash-15-st { position: absolute; top: 20.3%; left: 62.5%; } #inf__flash-15-nd { position: absolute; top: 30%; left: 47%; }
+#inf__flash-16-st { position: absolute; top: 45%; left: 42%; } #inf__flash-16-nd { position: absolute; top: 29%; left: 48%; }

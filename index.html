@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSGO道具教学</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<!-- 导航区 -->
+	<nav class="navbar">
+		<div class="navbar__container">
+			<a href="https://zh.wikipedia.org/wiki/%E5%8F%8D%E6%81%90%E7%B2%BE%E8%8B%B1%EF%BC%9A%E5%85%A8%E7%90%83%E6%94%BB%E5%8A%BF" class="navbar__logo" target="_blank">
+				<i class="fa-solid fa-gun"></i>CSGO
+			</a>
+			<div class="navbar__toggle">
+				<span class="white__bar"></span>
+				<span class="white__bar"></span>
+				<span class="white__bar"></span>
+			</div>
+			<ul class="navbar__menu">
+				<li class="menu__item">
+					<p class="menu__header">地图选择</p>
+					<ul class="dropdown">
+						<li class="dropdown__item" id="inferno">炼狱小镇</li>
+						<li class="dropdown__item" id="dust">炙热炎城</li>
+						<li class="dropdown__item" id="mirage">荒漠迷城</li>
+					</ul>
+				</li>
+				<li class="menu__item">
+					<p class="menu__header">基础教学模式</p>
+					<ul class="dropdown">
+						<li class="dropdown__item mode" id="basic">基础道具</li>
+						<li class="dropdown__item mode" id="levelup">进阶道具</li>
+					</ul>
+				</li>
+				<li class="menu__item">
+					<p class="menu__header">进阶教学模式</p>
+					<ul class="dropdown">
+						<li class="dropdown__item mode" id="section">区域道具</li>
+						<li class="dropdown__item mode" id="combine">组合道具</li>
+						<li class="dropdown__item mode" id="pro">职业队配合道具</li>
+					</ul>
+				</li>
+				<li class="menu__button">
+					<div class="navbar__button" onclick="alert('先把反恐的理念搞懂')">作者想说</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<!-- 主体区 -->
+	<div class="main">
+		<div class="main__container">
+			<div class="picture__container have__left">
+				<img src="images/nomap.png" alt="map" class="map">
+				<!-- inf烟 -->
+				<div id="inf__smoke-1-st" class="inf smoke__st start level1 section__inf5"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__smoke-1-nd" class="smoke__nd end"><i class="fa-solid fa-cloud fa-lg"></i></div>
+				<div id="inf__smoke-2-st" class="inf smoke__st start level1 section__inf7"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__smoke-2-nd" class="smoke__nd end"><i class="fa-solid fa-cloud fa-lg"></i></div>
+				<div id="inf__smoke-3-st" class="inf smoke__st start level1 section__inf5 section__inf7"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__smoke-3-nd" class="smoke__nd end"><i class="fa-solid fa-cloud fa-lg"></i></div>
+				<div id="inf__smoke-4-st" class="inf smoke__st start level1 section__inf1"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__smoke-4-nd" class="smoke__nd end"><i class="fa-solid fa-cloud fa-lg"></i></div>
+				<div id="inf__smoke-5-st" class="inf smoke__st start level1 section__inf1"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__smoke-5-nd" class="smoke__nd end"><i class="fa-solid fa-cloud fa-lg"></i></div>
+				<div id="inf__smoke-6-st" class="inf smoke__st start level1 section__inf2"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__smoke-6-nd" class="smoke__nd end"><i class="fa-solid fa-cloud fa-lg"></i></div>
+				<div id="inf__smoke-7-st" class="inf smoke__st start level1 section__inf3"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__smoke-7-nd" class="smoke__nd end"><i class="fa-solid fa-cloud fa-lg"></i></div>
+				<div id="inf__smoke-8-st" class="inf smoke__st start level1 section__inf1"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__smoke-8-nd" class="smoke__nd end"><i class="fa-solid fa-cloud fa-lg"></i></div>
+				<div id="inf__smoke-9-st" class="inf smoke__st start level1"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__smoke-9-nd" class="smoke__nd end"><i class="fa-solid fa-cloud fa-lg"></i></div>
+				<div id="inf__smoke-10-st" class="inf smoke__st start level2 section__inf7"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__smoke-10-nd" class="smoke__nd end"><i class="fa-solid fa-cloud fa-lg"></i></div>
+				<div id="inf__smoke-11-st" class="inf smoke__st start level2"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__smoke-11-nd" class="smoke__nd end"><i class="fa-solid fa-cloud fa-lg"></i></div>
+				<div id="inf__smoke-12-st" class="inf smoke__st start level2 section__inf8"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__smoke-12-nd" class="smoke__nd end"><i class="fa-solid fa-cloud fa-lg"></i></div>
+				<div id="inf__smoke-13-st" class="inf smoke__st start level2 section__inf7"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__smoke-13-nd" class="smoke__nd end"><i class="fa-solid fa-cloud fa-lg"></i></div>
+				<div id="inf__smoke-14-st" class="inf smoke__st start level1 section__inf2"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__smoke-14-nd" class="smoke__nd end"><i class="fa-solid fa-cloud fa-lg"></i></div>
+				<div id="inf__smoke-15-st" class="inf smoke__st start level2 section__inf2 section__inf8"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__smoke-15-nd" class="smoke__nd end"><i class="fa-solid fa-cloud fa-lg"></i></div>
+				<div id="inf__smoke-16-st" class="inf smoke__st start level2 section__inf6"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__smoke-16-nd" class="smoke__nd end"><i class="fa-solid fa-cloud fa-lg"></i></div>
+				<div id="inf__smoke-17-st" class="inf smoke__st start level1 section__inf6"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__smoke-17-nd" class="smoke__nd end"><i class="fa-solid fa-cloud fa-lg"></i></div>
+				<div id="inf__smoke-18-st" class="inf smoke__st start level2 section__inf6"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__smoke-18-nd" class="smoke__nd end"><i class="fa-solid fa-cloud fa-lg"></i></div>
+				<div id="inf__smoke-19-st" class="inf smoke__st start level2 section__inf7"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__smoke-19-nd" class="smoke__nd end"><i class="fa-solid fa-cloud fa-lg"></i></div>
+				<div id="inf__smoke-20-st" class="inf smoke__st start level2 section__inf8"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__smoke-20-nd" class="smoke__nd end"><i class="fa-solid fa-cloud fa-lg"></i></div>
+				<div id="inf__smoke-21-st" class="inf smoke__st start level1 section__inf1"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__smoke-21-nd" class="smoke__nd end"><i class="fa-solid fa-cloud fa-lg"></i></div>
+				<div id="inf__smoke-22-st" class="inf smoke__st start level2 section__inf3 section__inf8"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__smoke-22-nd" class="smoke__nd end"><i class="fa-solid fa-cloud fa-lg"></i></div>
+				<div id="inf__smoke-23-st" class="inf smoke__st start level1 section__inf8"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__smoke-23-nd" class="smoke__nd end"><i class="fa-solid fa-cloud fa-lg"></i></div>
+				<div id="inf__smoke-24-st" class="inf smoke__st start level1 section__inf1"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__smoke-24-nd" class="smoke__nd end"><i class="fa-solid fa-cloud fa-lg"></i></div>
+				<div id="inf__smoke-25-st" class="inf smoke__st start level1 section__inf3"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__smoke-25-nd" class="smoke__nd end"><i class="fa-solid fa-cloud fa-lg"></i></div>
+				<div id="inf__smoke-26-st" class="inf smoke__st start level2 section__inf4"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__smoke-26-nd" class="smoke__nd end"><i class="fa-solid fa-cloud fa-lg"></i></div>
+				<div id="inf__smoke-27-st" class="inf smoke__st start level1 section__inf4"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__smoke-27-nd" class="smoke__nd end"><i class="fa-solid fa-cloud fa-lg"></i></div>
+				<div id="inf__smoke-28-st" class="inf smoke__st start level1 section__inf2"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__smoke-28-nd" class="smoke__nd end"><i class="fa-solid fa-cloud fa-lg"></i></div>
+				<!-- inf火 -->
+				<div id="inf__fire-1-st" class="inf fire__st start level1"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__fire-1-nd" class="fire__nd end"><i class="fa-solid fa-fire fa-lg"></i></div>
+				<div id="inf__fire-2-st" class="inf fire__st start level2"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__fire-2-nd" class="fire__nd end"><i class="fa-solid fa-fire fa-lg"></i></div>
+				<div id="inf__fire-3-st" class="inf fire__st start level1"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__fire-3-nd" class="fire__nd end"><i class="fa-solid fa-fire fa-lg"></i></div>
+				<div id="inf__fire-4-st" class="inf fire__st start level1"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__fire-4-nd" class="fire__nd end"><i class="fa-solid fa-fire fa-lg"></i></div>
+				<div id="inf__fire-5-st" class="inf fire__st start level1"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__fire-5-nd" class="fire__nd end"><i class="fa-solid fa-fire fa-lg"></i></div>
+				<div id="inf__fire-6-st" class="inf fire__st start level1"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__fire-6-nd" class="fire__nd end"><i class="fa-solid fa-fire fa-lg"></i></div>
+				<div id="inf__fire-7-st" class="inf fire__st start level2"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__fire-7-nd" class="fire__nd end"><i class="fa-solid fa-fire fa-lg"></i></div>
+				<div id="inf__fire-8-st" class="inf fire__st start level1"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__fire-8-nd" class="fire__nd end"><i class="fa-solid fa-fire fa-lg"></i></div>
+				<div id="inf__fire-9-st" class="inf fire__st start level2"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__fire-9-nd" class="fire__nd end"><i class="fa-solid fa-fire fa-lg"></i></div>
+				<div id="inf__fire-10-st" class="inf fire__st start level1"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__fire-10-nd" class="fire__nd end"><i class="fa-solid fa-fire fa-lg"></i></div>
+				<div id="inf__fire-11-st" class="inf fire__st start level2"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__fire-11-nd" class="fire__nd end"><i class="fa-solid fa-fire fa-lg"></i></div>
+				<div id="inf__fire-12-st" class="inf fire__st start level2"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__fire-12-nd" class="fire__nd end"><i class="fa-solid fa-fire fa-lg"></i></div>
+				<div id="inf__fire-13-st" class="inf fire__st start level1"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__fire-13-nd" class="fire__nd end"><i class="fa-solid fa-fire fa-lg"></i></div>
+				<!-- inf雷 -->
+				<div id="inf__grenade-1-st" class="inf grenade__st start level1"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__grenade-1-nd" class="grenade__nd end"><i class="fa-solid fa-burst fa-lg"></i></div>
+				<div id="inf__grenade-2-st" class="inf grenade__st start level1"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__grenade-2-nd" class="grenade__nd end"><i class="fa-solid fa-burst fa-lg"></i></div>
+				<div id="inf__grenade-3-st" class="inf grenade__st start level1"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__grenade-3-nd" class="grenade__nd end"><i class="fa-solid fa-burst fa-lg"></i></div>
+				<div id="inf__grenade-4-st" class="inf grenade__st start level2"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__grenade-4-nd" class="grenade__nd end"><i class="fa-solid fa-burst fa-lg"></i></div>
+				<div id="inf__grenade-5-st" class="inf grenade__st start level1"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__grenade-5-nd" class="grenade__nd end"><i class="fa-solid fa-burst fa-lg"></i></div>
+				<div id="inf__grenade-6-st" class="inf grenade__st start level1"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__grenade-6-nd" class="grenade__nd end"><i class="fa-solid fa-burst fa-lg"></i></div>
+				<div id="inf__grenade-7-st" class="inf grenade__st start level2"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__grenade-7-nd" class="grenade__nd end"><i class="fa-solid fa-burst fa-lg"></i></div>
+				<div id="inf__grenade-8-st" class="inf grenade__st start level2"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__grenade-8-nd" class="grenade__nd end"><i class="fa-solid fa-burst fa-lg"></i></div>
+				<div id="inf__grenade-9-st" class="inf grenade__st start level1"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__grenade-9-nd" class="grenade__nd end"><i class="fa-solid fa-burst fa-lg"></i></div>
+				<div id="inf__grenade-10-st" class="inf grenade__st start level1"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__grenade-10-nd" class="grenade__nd end"><i class="fa-solid fa-burst fa-lg"></i></div>
+				<div id="inf__grenade-11-st" class="inf grenade__st start level2"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__grenade-11-nd" class="grenade__nd end"><i class="fa-solid fa-burst fa-lg"></i></div>
+				<!-- inf闪 -->
+				<div id="inf__flash-1-st" class="inf flash__st start level2"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__flash-1-nd" class="flash__nd end"><i class="fa-solid fa-eye-slash fa-lg"></i></div>				
+				<div id="inf__flash-2-st" class="inf flash__st start level1"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__flash-2-nd" class="flash__nd end"><i class="fa-solid fa-eye-slash fa-lg"></i></div>				
+				<div id="inf__flash-3-st" class="inf flash__st start level1"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__flash-3-nd" class="flash__nd end"><i class="fa-solid fa-eye-slash fa-lg"></i></div>				
+				<div id="inf__flash-4-st" class="inf flash__st start level1"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__flash-4-nd" class="flash__nd end"><i class="fa-solid fa-eye-slash fa-lg"></i></div>				
+				<div id="inf__flash-5-st" class="inf flash__st start level1"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__flash-5-nd" class="flash__nd end"><i class="fa-solid fa-eye-slash fa-lg"></i></div>				
+				<div id="inf__flash-6-st" class="inf flash__st start level2"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__flash-6-nd" class="flash__nd end"><i class="fa-solid fa-eye-slash fa-lg"></i></div>				
+				<div id="inf__flash-7-st" class="inf flash__st start level2"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__flash-7-nd" class="flash__nd end"><i class="fa-solid fa-eye-slash fa-lg"></i></div>				
+				<div id="inf__flash-8-st" class="inf flash__st start level2"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__flash-8-nd" class="flash__nd end"><i class="fa-solid fa-eye-slash fa-lg"></i></div>				
+				<div id="inf__flash-9-st" class="inf flash__st start level1"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__flash-9-nd" class="flash__nd end"><i class="fa-solid fa-eye-slash fa-lg"></i></div>				
+				<div id="inf__flash-10-st" class="inf flash__st start level1"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__flash-10-nd" class="flash__nd end"><i class="fa-solid fa-eye-slash fa-lg"></i></div>				
+				<div id="inf__flash-11-st" class="inf flash__st start level2"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__flash-11-nd" class="flash__nd end"><i class="fa-solid fa-eye-slash fa-lg"></i></div>				
+				<div id="inf__flash-12-st" class="inf flash__st start level1"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__flash-12-nd" class="flash__nd end"><i class="fa-solid fa-eye-slash fa-lg"></i></div>				
+				<div id="inf__flash-13-st" class="inf flash__st start level2"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__flash-13-nd" class="flash__nd end"><i class="fa-solid fa-eye-slash fa-lg"></i></div>				
+				<div id="inf__flash-14-st" class="inf flash__st start level1"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__flash-14-nd" class="flash__nd end"><i class="fa-solid fa-eye-slash fa-lg"></i></div>				
+				<div id="inf__flash-15-st" class="inf flash__st start level1"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__flash-15-nd" class="flash__nd end"><i class="fa-solid fa-eye-slash fa-lg"></i></div>				
+				<div id="inf__flash-16-st" class="inf flash__st start level1"><i class="fa-solid fa-circle fa-lg"></i></div><div id="inf__flash-16-nd" class="flash__nd end"><i class="fa-solid fa-eye-slash fa-lg"></i></div>				
+				
+				<canvas class="canvas" width="800" height="800"></canvas>
+			</div>
+ 			<div class="main__content have__right"> 
+				<div class="filter__layer"></div>
+				<p class="msg1">请选择想要展示的道具类型:</p>
+				<div class="four__modes__button">
+					<button class="mode__button" id="smoke__mode">烟雾弹</button>
+					<button class="mode__button" id="flash__mode">闪光弹</button>
+					<button class="mode__button" id="grenade__mode">手榴弹</button>
+					<button class="mode__button" id="fire__mode">火焰弹</button>
+				</div>
+				<p class="msg2">(说明, 此处展示区域性道具中的烟, 因其最有用与实际)</p>
+				<div class="section__choose">
+					<div class="section__inf">
+						<button class="section__button" id="section__inf1">链接</button>
+						<button class="section__button" id="section__inf2">A1</button>
+						<button class="section__button" id="section__inf3">书房</button>
+						<button class="section__button" id="section__inf4">拱门</button>
+						<button class="section__button" id="section__inf5">警家</button>								
+						<button class="section__button" id="section__inf6">香蕉道</button>									
+						<button class="section__button" id="section__inf7">B区</button>									
+						<button class="section__button" id="section__inf8">A区</button>	
+					</div>		
+				</div>
+				<div class="item__info">
+					<p class="msg3">请点击图标以展示道具信息:</p>
+					<p class="msg3__content"></p>
+					<a href="#" class="learn" target="_blank">学习</a>
+				</div>
+				<p class="msg4">请选择阵营</p>
+				<div class="combine__choose">
+					<div class="sideT side">
+						<button class="button__T side__button">T</button>
+						<ul class="side__list side__list__T inf">
+							<li class="side__list__dropdown"><a href="https://www.bilibili.com/video/BV1Yg4y1v7yJ?spm_id_from=333.337.search-card.all.click&vd_source=2818d1c4a881a681a109bf22cf3e1944&t=32.6" class="dropdown__links" target="_blank">封A1打链接</a></li>
+							<li class="side__list__dropdown"><a href="https://www.bilibili.com/video/BV1mo4y1k7Py?spm_id_from=333.337.search-card.all.click&vd_source=2818d1c4a881a681a109bf22cf3e1944&t=23.7" class="dropdown__links" target="_blank">香蕉道一套</a></li>
+							<li class="side__list__dropdown"><a href="https://www.bilibili.com/video/BV1Gf4y1p77h?spm_id_from=333.337.search-card.all.click&vd_source=2818d1c4a881a681a109bf22cf3e1944&t=263.3" class="dropdown__links" target="_blank">五步蛇</a></li>
+							<li class="side__list__dropdown"><a href="https://www.bilibili.com/video/BV1pq4y1q7rp?spm_id_from=333.337.search-card.all.click&vd_source=2818d1c4a881a681a109bf22cf3e1944&t=3.6" class="dropdown__links" target="_blank">636rush中</a></li>
+						</ul>
+					</div>
+					<div class="sideCT side">
+						<button class="button__CT side__button">CT</button>
+						<ul class="side__list side__list__CT inf">
+							<li class="side__list__dropdown"><a href="https://www.bilibili.com/video/BV1E94y1S7rm?spm_id_from=333.999.0.0&vd_source=2818d1c4a881a681a109bf22cf3e1944&t=222.6" class="dropdown__links" target="_blank">香蕉道反清</a></li>
+							<li class="side__list__dropdown"><a href="https://www.bilibili.com/video/BV1sz4y117QA?spm_id_from=333.337.search-card.all.click&vd_source=2818d1c4a881a681a109bf22cf3e1944&t=1.5" class="dropdown__links" target="_blank">CT中路一套</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="app.js"></script>
+	<script src="https://kit.fontawesome.com/c332c41ece.js" crossorigin="anonymous"></script>
+</body>
+</html>
